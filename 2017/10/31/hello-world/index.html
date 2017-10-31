@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="TorstenLiu">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-31T10:54:37.603Z">
+<meta property="og:updated_time" content="2017-10-31T14:58:32.656Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
@@ -351,16 +351,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/10/31/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/10/31/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
             
           
 
@@ -829,8 +819,8 @@ var jiathis_config={
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     
 <!-- END LOCAL -->
 
@@ -839,25 +829,27 @@ var jiathis_config={
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             id: window.location.pathname, 
-            owner: 'Torsten-Liu# MUST HAVE, Your Github ID',
-            repo: 'https://github.com/Torsten-Liu/TorstenLiu.github.io.git',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            owner: '',
+            repo: '',
             
             oauth: {
             
             
-                client_secret: '40e6aab7d552f923bf7c24398ce6269a0d0ae0e6',
+                client_secret: 'xxxx',
             
-                client_id: 'ce55c3d2ee061cfcf552'
+                client_id: 'xxxx'
             }});
         gitment.render('gitment-container');
       }
 
       
-      renderGitment();
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
       
       </script>
     
